@@ -1,8 +1,8 @@
 # ********     Author: Lijun Chang    ******
 # ******** Email: ljchang@outlook.com ******
 #
-CC=g++ -O3
-CFLAGS=-c -I. -std=c++11
+CC=g++
+CFLAGS=-c -I. -std=c++11 -g
 
 all: ged
 

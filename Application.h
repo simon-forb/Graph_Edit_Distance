@@ -102,6 +102,7 @@ private:
 	void compute_mapping_order() ;
 	void generate_best_extension(State *parent, State *now) ; // compute the best child of a state
 	void compute_mapped_cost_and_upper_bound(State *now, ui n, ui *candidates, int *mapping) ;
+	void print_BX() const;
 	void construct_sibling(State *pre_sibling, State *now) ; // compute the best ungenerated sibling of a state
 	void extend_to_full_mapping(State *parent, State *now) ;
 	void compute_mapped_cost(State *now) ;

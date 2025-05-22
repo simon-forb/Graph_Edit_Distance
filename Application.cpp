@@ -526,12 +526,22 @@ ui Application::AStar(vector<pair<ui,ui> > *mapping_ptr, int *lb_ptr) {
 	printf("Extended #states smaller: %d, equal: %d, larger: %d\n", smaller, exact, total-smaller-exact);
 #endif
 
+	print_BX();
+
 	if(mapping_ptr != NULL&&(*lb_ptr) < 0) {
 		if(heap_n > 0&&heap[0]->lower_bound < upper_bound) printf("WA in AStar %u %u\n", heap[0]->lower_bound, upper_bound);
 		*lb_ptr = upper_bound;
 	}
 
 	return upper_bound;
+}
+
+void Application::print_BX() const {
+	printf("\nMapping: ");
+	for (int i = 0; i < q_n; i++) {
+        printf("%d -> %d, ", i, BX[i]);
+    }
+	printf("\n");
 }
 
 inline void Application::add_to_pool(State *st) {

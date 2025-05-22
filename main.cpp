@@ -214,7 +214,7 @@ int main(int argc, char *argv[]) {
 			else res = -1;
 
 			if(print_ged) {
-				printf("%d\n", res);
+				printf("GED: %d\n", res);
 				if(res > max_ged) max_ged = res;
 				if(res < min_ged) min_ged = res;
 			}
@@ -292,7 +292,7 @@ int main(int argc, char *argv[]) {
 
 				if(print_ged) {
 					if(j) printf(" ");
-					printf("%u", res);
+					printf("GED: %u\n", res);
 					if(res > max_ged) max_ged = res;
 					if(res < min_ged) min_ged = res;
 				}
